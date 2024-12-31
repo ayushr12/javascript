@@ -25,12 +25,14 @@
 
      // attachEvent()
     // jQuery - on
-
+ 
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
+
+    //+++++Event bubbling - bottom to top++++++
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
     // }, false)
@@ -39,7 +41,19 @@
     //     console.log("owl clicked");
     //     e.stopPropagation()
     // }, false)
+
+
+    //+++++Event Capturing - top to bottom+++++
+     // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, true)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation() //using this method Bubbling will stop , it will not move from bottom to top  
+    // }, true)
     
+
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
     //     e.stopPropagation()
